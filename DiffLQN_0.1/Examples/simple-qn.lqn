@@ -1,0 +1,44 @@
+# This block is supported for backward compatibility
+# but it is not used by DiffLQN
+G
+"simple-qn.lqn"
+0.0001
+500
+1
+0.5
+-1
+
+# Processors declaration, with multiplicity 
+P 0
+p ClientP f m 10 
+p ServerP f m 2
+-1
+
+# Tasks declaration
+T 0
+t ClientT r think -1 ClientP m 10 # 10 client tasks running on client processors
+t ServerT n serve -1 ServerP m 2  #  2 server tasks running on server processors
+-1
+
+# Entries declaration
+E 0
+s think 0.01 -1      # entry think has time demand 0.01 time units
+y think serve 1.0 -1   # entry think makes a synchronous call to serve 
+s serve 0.02 -1      # entry serve has time demand 0.02 time units
+-1
+
+# DiffLQN settings, starting with #! 
+# These will be ignored by LQNS
+
+# 1. Solver settings
+#! v 1.0e5           # fast rate to approximate instantaneous events
+#! solver ode        # ODE analysis - solver sim will run simulation
+#! stoptime 50.0     # integration time horizon
+
+# 2. Output settings 
+#! throughput: think serve
+#! utilization: ServerP
+#! responsetime: serve -1
+
+# 3. Export settings
+#! export csv

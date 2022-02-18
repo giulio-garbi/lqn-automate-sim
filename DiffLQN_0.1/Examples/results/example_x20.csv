@@ -1,0 +1,58 @@
+throughput,	act,	prepare,	153.70752148518605
+throughput,	act,	pack,	153.70752148557463
+throughput,	act,	ship,	153.70752148531017
+throughput,	act,	display,	153.707521485588
+throughput,	act,	cache,	461.12256445781475
+throughput,	act,	internal,	438.06643623492795
+throughput,	act,	external,	23.0561282228914
+throughput,	entry,	think,	153.70752148566632
+throughput,	entry,	save,	153.70752148570386
+throughput,	entry,	notify,	153.7075214850302
+throughput,	entry,	read,	176.76364970792196
+throughput,	entry,	write,	153.70752148508114
+throughput,	act,	write1,	153.70752148577364
+throughput,	act,	write2,	153.70752148506384
+throughput,	entry,	get,	153.70752148535735
+throughput,	entry,	update,	153.70752148483288
+throughput,	entry,	visit,	461.1225644578129
+throughput,	entry,	buy,	153.70752148510712
+throughput,	task,	Client,	153.70752148566632
+throughput,	task,	Server,	922.2451289136541
+throughput,	task,	FileServer,	330.4711711930031
+throughput,	task,	Backup,	307.41504297019026
+utilization,	proc,	PClient,	15.370752148568224
+utilization,	proc,	PServer,	24.178193129635616
+utilization,	proc,	PDisk,	11.143795307669613
+utilization,	task,	Client,	39.998462924785144
+utilization,	task,	Server,	22.835481075700063
+utilization,	task,	FileServer,	11.164007846744624
+utilization,	task,	Backup,	3.0802987305615837
+proc utilization,	act,	prepare,	1.5370752148518605
+proc utilization,	act,	pack,	4.611225644567239
+proc utilization,	act,	ship,	1.5370752148531017
+proc utilization,	act,	display,	0.153707521485588
+proc utilization,	act,	cache,	0.46112256445781474
+proc utilization,	act,	internal,	0.43806643623492797
+proc utilization,	act,	external,	0.0691683846686742
+proc utilization,	act,	think,	15.370752148566632
+proc utilization,	act,	save,	3.074150429714077
+proc utilization,	act,	notify,	12.296601718802417
+proc utilization,	act,	read,	1.7676364970792195
+proc utilization,	entry,	write,	6.302008380888327
+proc utilization,	act,	write1,	0.15370752148577363
+proc utilization,	act,	write2,	6.148300859402553
+proc utilization,	act,	get,	1.5370752148535733
+proc utilization,	act,	update,	1.5370752148483289
+response time,	entry,	think,	0.26023449999959686
+response time,	entry,	save,	0.02106000000000046
+response time,	entry,	notify,	0.08002000000000002
+response time,	entry,	read,	0.010018695652173904
+response time,	entry,	write,	0.06111000000000199
+response time,	entry,	get,	0.010020000000000012
+response time,	entry,	update,	0.010020000000000015
+response time,	entry,	visit,	0.0021415000000000214
+response time,	entry,	buy,	0.04106000000009947
+response time,	task,	Client,	0.26023449999959686
+response time,	task,	Server,	0.02476074999994856
+response time,	task,	FileServer,	0.03378209302325108
+response time,	task,	Backup,	0.010020000000000012

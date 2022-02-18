@@ -1,0 +1,4 @@
+throughput,	entry,	think,	99.85022466299932
+throughput,	entry,	serve,	99.85022466300589
+utilization,	proc,	ServerP,	1.9970044932601176
+response time,	entry,	serve,	0.02002

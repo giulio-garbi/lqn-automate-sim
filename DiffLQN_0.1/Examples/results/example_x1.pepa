@@ -1,0 +1,54 @@
+
+//Definitions
+PClient_1 = (get_PClient,100000.0).PClient_2;
+PClient_2 = (think,80.0).PClient_1;
+Think_1 = (get_PClient,100000.0).(think,80.0).Think_2;
+Think_2 = (req_think_visit,100000.0).(rep_think_visit,100000.0).(get_PClient,100000.0).(think,80.0).(req_think_visit,100000.0).(rep_think_visit,100000.0).(get_PClient,100000.0).(think,80.0).(req_think_visit,100000.0).(rep_think_visit,100000.0).(get_PClient,100000.0).(think,80.0).Think_3;
+Think_3 = (req_think_save,100000.0).(rep_think_save,100000.0).(get_PClient,100000.0).(think,80.0).Think_4;
+Think_4 = (req_think_notify,100000.0).(rep_think_notify,100000.0).(get_PClient,100000.0).(think,80.0).Think_5;
+Think_5 = (req_think_read,100000.0).(rep_think_read,100000.0).(get_PClient,100000.0).(think,80.0).Think_6;
+Think_6 = (req_think_buy,100000.0).(rep_think_buy,100000.0).(get_PClient,100000.0).(think,80.0).Think_1;
+PServer_1 = (get_PServer,100000.0).PServer_2;
+PServer_2 = (prepare,100.0).PServer_1 + (pack,33.333333333333336).PServer_1 + (ship,100.0).PServer_1 + (display,1000.0).PServer_1 + (cache,1000.0).PServer_1 + (internal,1000.0).PServer_1 + (external,666.6666666666666).PServer_1 + (notify,12.5).PServer_1 + (save,100.0).PServer_1;
+Prepare_1 = (get_PServer,100000.0).(prepare,100.0).F1;
+Pack_1 = (get_PServer,100000.0).(pack,33.333333333333336).Pack_2;
+Pack_2 = (join_F1,100000.0).Fork_pack;
+Ship_1 = (get_PServer,100000.0).(ship,100.0).Ship_2;
+Ship_2 = (join_F1,100000.0).Fork_ship;
+Display_1 = (get_PServer,100000.0).(display,1000.0).Display_2;
+Display_2 = (rep_think_buy,100000.0).Server;
+Cache_1 = (get_PServer,100000.0).(cache,1000.0).D1;
+D1 = (or_D1,95000.0).Internal_1 + (or_D1,5000.0).External_1;
+Internal_1 = (get_PServer,100000.0).(internal,1000.0).Internal_2;
+Internal_2 = (rep_think_visit,100000.0).Server;
+External_1 = (get_PServer,100000.0).(external,666.6666666666666).External_2;
+External_2 = (req_external_read,100000.0).(rep_external_read,100000.0).(get_PServer,100000.0).(external,666.6666666666666).External_3;
+External_3 = (rep_think_visit,100000.0).Server;
+Notify_1 = (get_PServer,100000.0).(notify,12.5).Notify_2;
+Notify_2 = (rep_think_notify,100000.0).Server;
+Save_1 = (get_PServer,100000.0).(save,100.0).Save_2;
+Save_2 = (req_save_write,100000.0).(rep_save_write,100000.0).(get_PServer,100000.0).(save,100.0).Save_3;
+Save_3 = (rep_think_save,100000.0).Server;
+PDisk_1 = (get_PDisk,100000.0).PDisk_2;
+PDisk_2 = (read,100.0).PDisk_1 + (write1,1000.0).PDisk_1 + (write2,75.0).PDisk_1 + (get,100.0).PDisk_1 + (update,100.0).PDisk_1;
+Read_1 = (get_PDisk,100000.0).(read,100.0).Read_2;
+Read_2 = (rep_external_read,100000.0).FileServer + (rep_think_read,100000.0).FileServer;
+Write1_1 = (get_PDisk,100000.0).(write1,1000.0).Write1_2;
+Write1_2 = (rep_save_write,100000.0).Write2_1;
+Write2_1 = (get_PDisk,100000.0).(write2,75.0).Write2_2;
+Write2_2 = (req_write2_get,100000.0).(rep_write2_get,100000.0).(get_PDisk,100000.0).(write2,75.0).Write2_3;
+Write2_3 = (req_write2_update,100000.0).(rep_write2_update,100000.0).(get_PDisk,100000.0).(write2,75.0).FileServer;
+Get_1 = (get_PDisk,100000.0).(get,100.0).Get_2;
+Get_2 = (rep_write2_get,100000.0).Backup;
+Update_1 = (get_PDisk,100000.0).(update,100.0).Update_2;
+Update_2 = (rep_write2_update,100000.0).Backup;
+F1 = (fork_F1,100000.0).J1;
+J1 = (join_F1,100000.0).Display_1;
+Fork_pack = (fork_F1,100000.0).Pack_1;
+Fork_ship = (fork_F1,100000.0).Ship_1;
+Server = (req_think_visit,100000.0).Cache_1 + (req_think_buy,100000.0).Prepare_1 + (req_think_notify,100000.0).Notify_1 + (req_think_save,100000.0).Save_1;
+FileServer = (req_external_read,100000.0).Read_1 + (req_think_read,100000.0).Read_1 + (req_save_write,100000.0).Write1_1;
+Backup = (req_write2_get,100000.0).Get_1 + (req_write2_update,100000.0).Update_1;
+
+//System Equation
+((((Think_1[2] <req_think_visit,rep_think_visit,req_think_save,rep_think_save,req_think_notify,rep_think_notify,req_think_buy,rep_think_buy> (Server[2] <fork_F1,join_F1> (Fork_pack[2] <fork_F1,join_F1> Fork_ship[2]))) <req_think_read,rep_think_read,req_save_write,rep_save_write,req_external_read,rep_external_read> FileServer) <req_write2_get,rep_write2_get,req_write2_update,rep_write2_update> Backup) <get_PClient,think,get_PServer,prepare,pack,ship,display,cache,internal,external,notify,save,get_PDisk,read,write1,write2,get,update> ((PClient_1[2] <> PServer_1[2]) <> PDisk_1[2]))

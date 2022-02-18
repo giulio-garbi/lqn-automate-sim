@@ -1,0 +1,70 @@
+G
+"Scaled_Example"
+0.0001
+500
+1
+0.5
+-1
+
+#processor definition block
+P 0  	
+p PClient f m 20
+p PServer f m 20
+p PDisk f m 20
+-1
+
+#task definition block
+T 0 	
+t Client r think -1 PClient m 20
+t Server n visit buy notify save -1 PServer m 20
+t FileServer n read write -1 PDisk m 10
+t Backup n get update -1 PDisk m 10
+-1
+
+#entry definition block
+E 0 	
+s think 0.1 -1
+y think visit 3.0 -1
+y think save 1.0 -1
+y think notify 1.0 -1
+y think read 1.0 -1
+y think buy 1.0 -1
+A visit cache
+A buy prepare
+s save 0.02 -1
+y save write 1.0 -1
+s notify 0.08 -1
+s read 0.01 -1
+s write 0.001 0.04 -1
+y write get 0.0 1.0 -1
+y write update 0.0 1.0 -1
+s get 0.01 -1
+s update 0.01 -1
+-1
+
+#activity definition block for task Server
+A Server 	 
+ s prepare 0.01
+ s pack 0.03
+ s ship 0.01
+ s display 0.001
+ s cache 0.001
+ s internal 0.001
+ s external 0.003
+ y external read 1.0
+:
+ prepare -> pack & ship;
+ pack & ship -> display;
+ cache -> (0.95)internal + (0.05)external;
+ internal[visit];
+ external[visit];
+ display[buy]
+-1
+
+#solver information block
+#! v 1.0e5
+#! solver sim
+#! confidence_level 0.95
+#! confidence_percent_error 5.0
+#! stoptime 1000.0 
+#! export csv
