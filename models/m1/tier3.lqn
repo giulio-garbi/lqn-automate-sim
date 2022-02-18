@@ -24,10 +24,10 @@ t T3 n e3 -1 ProcT3 m {{cli}}
 
 # Entries declaration
 E 0
-s browseEntry 1.0 -1
-s e1 1.0 -1
-s e2 1.0 -1
-s e3 1.0 -1
+s browseEntry 0.2415 -1
+s e1 0.0242 -1
+s e2 0.0117 -1
+s e3 0.0140 -1
 y browseEntry e1 1.0 -1
 y browseEntry e2 1.0 -1
 y e1 e3 1.0 -1
