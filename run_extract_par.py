@@ -8,6 +8,8 @@ import numpy as np
 import subprocess
 import multiprocess
 import time
+import shlex
+import signal
 from multiprocessing.managers import BaseManager
 
 from auxfnc import *
@@ -65,8 +67,11 @@ if __name__ == '__main__':
 
 	def runWatchdog(subpIdx, dt, sample, tmpmdl, tmpout, timeout_sec):
 		try:
+			dt.logline(subpIdx, "now trying: "+str(sample))
+			cmd = cmdline.format(inp=tmpmdl, out=tmpout)
 			timebeg = time.time()
-			subprocess.run(cmdline.format(inp=tmpmdl, out=tmpout), shell=True, check=True, timeout=timeout_sec, capture_output=True)
+			p = subprocess.Popen(cmd, start_new_session=True, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+			p.wait(timeout=timeout_sec)
 			timeend = time.time()
 			dt.logline(subpIdx, "successful ("+str(timeend-timebeg)+" seconds): "+str(sample))
 			return True
@@ -74,6 +79,7 @@ if __name__ == '__main__':
 			dt.logline(subpIdx, "tool error: "+str(sample))
 			return False
 		except subprocess.TimeoutExpired:
+			os.killpg(os.getpgid(p.pid), signal.SIGTERM)
 			dt.logline(subpIdx, "timeout ("+str(timeout_sec)+" seconds): "+str(sample))
 			return False
 
