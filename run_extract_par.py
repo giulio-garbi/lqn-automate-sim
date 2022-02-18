@@ -76,12 +76,13 @@ if __name__ == '__main__':
 		tmpout = "tmp"+pid+"_"+str(subpIdx)+".csv"
 		rng = random.Random(seed)
 		while dt.doContinue():
-			sample = generate(bndData, rng)
-			tmpmdltxt = mdlTempl.render({'inp':tmpmdl, 'out':tmpout, 'solvermode':'sim', **sample})
-			with open(tmpmdl, "w") as f:
-				f.write(tmpmdltxt)
-			while not runWatchdog(tmpmdl, tmpout, timeout_sec):
-				pass
+			success = False
+			while not success:
+				sample = generate(bndData, rng)
+				tmpmdltxt = mdlTempl.render({'inp':tmpmdl, 'out':tmpout, 'solvermode':'sim', **sample})
+				with open(tmpmdl, "w") as f:
+					f.write(tmpmdltxt)
+				success = runWatchdog(tmpmdl, tmpout, timeout_sec):
 			data = parseOut(tmpout)
 			dt.newData(data, sample, matname, mdlname)
 		try:
