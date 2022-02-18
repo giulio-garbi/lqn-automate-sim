@@ -49,8 +49,7 @@ if __name__ == '__main__':
 	bndname = sys.argv[2]
 	rep = int(sys.argv[3])
 	matname = sys.argv[4]
-
-	timeout_sec = 30*60
+	timeout_sec = int(sys.argv[5])
 
 	cmdline = 'java -jar DiffLQN_0.1/DiffLQN.jar {inp}'
 
@@ -61,6 +60,7 @@ if __name__ == '__main__':
 		except subprocess.CalledProcessError:
 			return False
 		except subprocess.TimeoutExpired:
+
 			return False
 
 	bndData = readBounds(bndname)
