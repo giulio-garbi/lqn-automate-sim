@@ -126,7 +126,7 @@ if __name__ == '__main__':
 
 	manager = getManager()
 	data = manager.mydata(rep, logfn)
-	cpus = os.cpu_count()
+	cpus = max(1, os.cpu_count()-2)
 	seeds = random.sample(range(10000000), k=cpus)
 	ps = [multiprocess.Process(target=createSomeSamples, args=(c, seeds[c], data)) for c in range(cpus)]
 	for p in ps:
