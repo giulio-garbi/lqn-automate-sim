@@ -11,6 +11,7 @@ import time
 import shlex
 import signal
 from multiprocessing.managers import BaseManager
+from lqnmodel import LQNmodel
 
 from auxfnc import *
 
@@ -20,6 +21,7 @@ class Data:
 		self.started = 0
 		self.datas = []
 		self.samples = []
+		self.models = []
 		self.rep = rep
 		self.log = log
 
@@ -36,12 +38,13 @@ class Data:
 			self.lock.release()
 		return True
 
-	def newData(self, subpIdx, data, sample, matname, mdlname):
+	def newData(self, subpIdx, data, sample, matname, mdlname, model):
 		self.lock.acquire()
 		try:
 			self.datas.append(data)
 			self.samples.append(sample)
-			saveMat(self.datas, matname, mdlname, self.samples, len(self.datas))
+			self.models.append(model)
+			saveMat(self.datas, matname, mdlname, self.samples, len(self.datas), self.models)
 			self.logline(subpIdx, "completed "+str(len(self.datas))+"/"+str(self.rep)+", running "+str(self.started-len(self.datas)))
 		finally:
 			self.lock.release()
@@ -102,6 +105,7 @@ if __name__ == '__main__':
 				tmpmdltxt = mdlTempl.render({'inp':tmpmdl, 'out':tmpout, 'solvermode':'sim', **sample})
 				with open(tmpmdl, "w") as f:
 					f.write(tmpmdltxt)
+				model = LQNmodel(tmpmdltxt)
 				success = runWatchdog(subpIdx, dt, sample, tmpmdl, tmpout, timeout_sec)
 				if success:
 					try:
@@ -109,7 +113,7 @@ if __name__ == '__main__':
 					except:
 						dt.logline(subpIdx, "parser error: "+str(sample))
 						success = False
-			dt.newData(subpIdx, data, sample, matname, mdlname)
+			dt.newData(subpIdx, data, sample, matname, mdlname, model)
 		try:
 			os.unlink(tmpmdl)
 		except:

@@ -51,32 +51,39 @@ def parseOut(fname):
 					rts[name] = value
 	return data
 
-def saveMat(datas, matFname, modelName, samples, sz):
+def saveMat(datas, matFname, modelName, samples, sz, lqnModels):
+	processorNames = list(lqnModels[0].procs.keys())
+	processorNames.sort()
 	entriesNames = list(datas[0]['throughput'].keys())
 	entriesNames.sort()
 	RTm = [[0.0] * len(entriesNames) for i in range(sz)] #full response time, with nested calls, waiting for cpu and cpu time
 	Tm = [[0.0] * len(entriesNames) for i in range(sz)] #entry throughput
 	Cli = [[0.0] for i in range(sz)]
-	NC = [[0.0] * len(entriesNames) for i in range(sz)]
+	NC = [[0.0] * len(processorNames) for i in range(sz)]
 	outsamples = [dict()] * sz
 	for d in range(sz):
 		data = datas[d]
 		sample = samples[d]
+		model = lqnModels[d]
 		if data is not None:
 			outsamples[d] = sample
 
-			for i in range(len(entriesNames)):
-				ent = entriesNames[i]
-				RTm[d][i] = float(data['responseTimes'][ent])
-				Tm[d][i] = float(data['throughput'][ent])
-				Cli[d][0] = float(sample['cli'])
-				NC[d][0] = float('inf')
-				NC[d][1] = float(sample['cpu1'])
-				NC[d][2] = float(sample['cpu2'])
-				NC[d][3] = float(sample['cpu3'])
+			for e in range(len(entriesNames)):
+				ent = entriesNames[e]
+				RTm[d][e] = float(data['responseTimes'][ent])
+				Tm[d][e] = float(data['throughput'][ent])
+
+			Cli[d][0] = model.getClientProc().mult
+			for p in range(len(processorNames)):
+				proc = processorNames[p]
+				if model.procs[proc].isClient:
+					NC[d][p] = float('inf')
+				else:
+					NC[d][p] = model.procs[proc].mult
 
 	savemat(matFname, {'Tm':np.array(Tm), 'RTm':np.array(RTm), 'entryNames': np.asarray(entriesNames, dtype='object'), \
-		'modelName':modelName, 'params':np.array(outsamples), 'Cli':np.array(Cli, dtype='float'), 'NC':np.array(NC, dtype='float')})
+		'modelName':modelName, 'params':np.array(outsamples), 'Cli':np.array(Cli, dtype='float'), \
+		'NC':np.array(NC, dtype='float'), 'procNames': np.asarray(processorNames, dtype='object')})
 
 '''def makeMatrixes(datas):
 	entriesNames = list(datas[0]['throughput'].keys())
