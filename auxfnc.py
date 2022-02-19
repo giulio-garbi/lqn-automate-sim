@@ -73,6 +73,7 @@ def saveMat(datas, matFname, modelName, samples, sz):
 				NC[d][0] = float('inf')
 				NC[d][1] = float(sample['cpu1'])
 				NC[d][2] = float(sample['cpu2'])
+				NC[d][3] = float(sample['cpu3'])
 
 	savemat(matFname, {'Tm':np.array(Tm), 'RTm':np.array(RTm), 'entryNames': np.asarray(entriesNames, dtype='object'), \
 		'modelName':modelName, 'params':np.array(outsamples), 'Cli':np.array(Cli, dtype='float'), 'NC':np.array(NC, dtype='float')})
