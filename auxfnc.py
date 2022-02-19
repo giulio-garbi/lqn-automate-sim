@@ -30,7 +30,7 @@ class Scan:
 			ans = self.cont[self.i]
 			self.i += 1
 			return ans
-			
+
 def parseOut(fname):
 	data = dict()
 	rts = dict()
@@ -50,14 +50,14 @@ def parseOut(fname):
 				elif measure == 'response time':
 					rts[name] = value
 	return data
-	
+
 def saveMat(datas, matFname, modelName, samples, sz):
 	entriesNames = list(datas[0]['throughput'].keys())
 	entriesNames.sort()
 	RTm = [[0.0] * len(entriesNames) for i in range(sz)] #full response time, with nested calls, waiting for cpu and cpu time
 	Tm = [[0.0] * len(entriesNames) for i in range(sz)] #entry throughput
 	Cli = [[0.0] for i in range(sz)]
-	NC = [[0.0, 0.0, 0.0] for i in range(sz)]
+	NC = [[0.0] * len(entriesNames) for i in range(sz)]
 	outsamples = [dict()] * sz
 	for d in range(sz):
 		data = datas[d]
@@ -73,7 +73,7 @@ def saveMat(datas, matFname, modelName, samples, sz):
 				NC[d][0] = float('inf')
 				NC[d][1] = float(sample['cpu1'])
 				NC[d][2] = float(sample['cpu2'])
-	
+
 	savemat(matFname, {'Tm':np.array(Tm), 'RTm':np.array(RTm), 'entryNames': np.asarray(entriesNames, dtype='object'), \
 		'modelName':modelName, 'params':np.array(outsamples), 'Cli':np.array(Cli, dtype='float'), 'NC':np.array(NC, dtype='float')})
 
