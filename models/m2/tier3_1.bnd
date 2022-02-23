@@ -1,2 +1,2 @@
-cli int 10 10
-cpu1 int 10 10
+cli int 1 500
+cpu1 int 1 30
