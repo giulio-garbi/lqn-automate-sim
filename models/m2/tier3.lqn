@@ -8,24 +8,24 @@ G
 
 # Processors declaration, with multiplicity
 P 0
-p ProcClient f m {{cli}}
-p ProcT1 f m {{cpu1}}
+p ProcClient f m 10
+p ProcT1 f m 3
 -1
 
 # Tasks declaration
 T 0
-t Client r browseEntry -1 ProcClient m {{cli}}
-t T1 n e1 -1 ProcT1 m {{cli}}
-t T2 n e2 -1 ProcT1 m {{cli}}
-t T3 n e3 -1 ProcT1 m {{cli}}
+t Client r browseEntry -1 ProcClient m 10
+t T1 n e1 -1 ProcT1 m 10
+t T2 n e2 -1 ProcT1 m 10
+t T3 n e3 -1 ProcT1 m 10
 -1
 
 # Entries declaration
 E 0
-s browseEntry 0.2415 -1
-s e1 0.0242 -1
-s e2 0.0117 -1
-s e3 0.0140 -1
+s browseEntry 2 -1
+s e1 2 -1
+s e2 2 -1
+s e3 2 -1
 y browseEntry e1 1.0 -1
 y e1 e2 1.0 -1
 y e2 e3 1.0 -1
@@ -38,11 +38,13 @@ y e2 e3 1.0 -1
 #! v 1.0e5           	# fast rate to approximate instantaneous events
 #! solver ode        	# ODE analysis - solver sim will run simulation
 #! confidence_level 0.99
-#! confidence_percent_error 0.1
+#! confidence_percent_error 1
+#! solver_abs_tol 1.0e-8
+#! stoptime 999999
 
 # 2. Output settings
 #! throughput: browseEntry e1 e2 e3
 #! responsetime: browseEntry e1 e2 e3 -1
 
 # 3. Export settings
-#! export csv {{out}}
+#! export csv 
