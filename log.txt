@@ -1,80 +1,400 @@
-[0] completed 0/20, running 1
-[1] completed 0/20, running 2
-[2] completed 0/20, running 3
-[0] now trying: {'cli': 74, 'cpu1': 15, 'cpu2': 9}
-[1] now trying: {'cli': 191, 'cpu1': 23, 'cpu2': 14}
-[3] completed 0/20, running 4
-[2] now trying: {'cli': 42, 'cpu1': 15, 'cpu2': 22}
-[4] completed 0/20, running 5
-[3] now trying: {'cli': 126, 'cpu1': 12, 'cpu2': 9}
-[4] now trying: {'cli': 129, 'cpu1': 12, 'cpu2': 8}
-[5] completed 0/20, running 6
-[5] now trying: {'cli': 69, 'cpu1': 25, 'cpu2': 10}
-[3] successful (654.2597770690918 seconds): {'cli': 126, 'cpu1': 12, 'cpu2': 9}
-[3] completed 1/20, running 5
-[3] completed 1/20, running 6
-[3] now trying: {'cli': 149, 'cpu1': 5, 'cpu2': 19}
-[4] successful (676.1188051700592 seconds): {'cli': 129, 'cpu1': 12, 'cpu2': 8}
-[4] completed 2/20, running 5
-[4] completed 2/20, running 6
-[4] now trying: {'cli': 190, 'cpu1': 5, 'cpu2': 22}
-[2] successful (688.0136601924896 seconds): {'cli': 42, 'cpu1': 15, 'cpu2': 22}
-[2] completed 3/20, running 5
-[2] completed 3/20, running 6
-[2] now trying: {'cli': 186, 'cpu1': 13, 'cpu2': 13}
-[0] successful (744.4084131717682 seconds): {'cli': 74, 'cpu1': 15, 'cpu2': 9}
-[0] completed 4/20, running 5
-[0] completed 4/20, running 6
-[0] now trying: {'cli': 25, 'cpu1': 9, 'cpu2': 14}
-[1] successful (750.5679550170898 seconds): {'cli': 191, 'cpu1': 23, 'cpu2': 14}
-[1] completed 5/20, running 5
-[1] completed 5/20, running 6
-[1] now trying: {'cli': 134, 'cpu1': 17, 'cpu2': 16}
-[5] successful (1251.9744093418121 seconds): {'cli': 69, 'cpu1': 25, 'cpu2': 10}
-[5] completed 6/20, running 5
-[5] completed 6/20, running 6
-[5] now trying: {'cli': 82, 'cpu1': 13, 'cpu2': 12}
-[3] successful (825.0736711025238 seconds): {'cli': 149, 'cpu1': 5, 'cpu2': 19}
-[3] completed 7/20, running 5
-[3] completed 7/20, running 6
-[3] now trying: {'cli': 194, 'cpu1': 22, 'cpu2': 10}
-[4] successful (809.8849711418152 seconds): {'cli': 190, 'cpu1': 5, 'cpu2': 22}
-[4] completed 8/20, running 5
-[4] completed 8/20, running 6
-[4] now trying: {'cli': 49, 'cpu1': 14, 'cpu2': 19}
-[2] successful (812.538586139679 seconds): {'cli': 186, 'cpu1': 13, 'cpu2': 13}
-[2] completed 9/20, running 5
-[2] completed 9/20, running 6
-[2] now trying: {'cli': 167, 'cpu1': 18, 'cpu2': 22}
-[1] successful (817.4601547718048 seconds): {'cli': 134, 'cpu1': 17, 'cpu2': 16}
-[1] completed 10/20, running 5
-[1] completed 10/20, running 6
-[1] now trying: {'cli': 74, 'cpu1': 8, 'cpu2': 19}
-[0] successful (864.6507258415222 seconds): {'cli': 25, 'cpu1': 9, 'cpu2': 14}
-[0] completed 11/20, running 5
-[0] completed 11/20, running 6
-[0] now trying: {'cli': 113, 'cpu1': 17, 'cpu2': 17}
-[5] successful (705.057050704956 seconds): {'cli': 82, 'cpu1': 13, 'cpu2': 12}
-[5] completed 12/20, running 5
-[5] completed 12/20, running 6
-[5] now trying: {'cli': 123, 'cpu1': 5, 'cpu2': 9}
-[4] successful (740.2732710838318 seconds): {'cli': 49, 'cpu1': 14, 'cpu2': 19}
-[4] completed 13/20, running 5
-[4] completed 13/20, running 6
-[4] now trying: {'cli': 60, 'cpu1': 9, 'cpu2': 24}
-[1] successful (674.7138800621033 seconds): {'cli': 74, 'cpu1': 8, 'cpu2': 19}
-[1] completed 14/20, running 5
-[1] completed 14/20, running 6
-[1] now trying: {'cli': 45, 'cpu1': 17, 'cpu2': 9}
-[3] successful (795.1204869747162 seconds): {'cli': 194, 'cpu1': 22, 'cpu2': 10}
-[3] completed 15/20, running 5
-[2] successful (789.2650299072266 seconds): {'cli': 167, 'cpu1': 18, 'cpu2': 22}
-[2] completed 16/20, running 4
-[0] successful (770.8395183086395 seconds): {'cli': 113, 'cpu1': 17, 'cpu2': 17}
-[0] completed 17/20, running 3
-[5] successful (651.2251398563385 seconds): {'cli': 123, 'cpu1': 5, 'cpu2': 9}
-[5] completed 18/20, running 2
-[4] successful (517.4969561100006 seconds): {'cli': 60, 'cpu1': 9, 'cpu2': 24}
-[4] completed 19/20, running 1
-[1] successful (514.5786259174347 seconds): {'cli': 45, 'cpu1': 17, 'cpu2': 9}
-[1] completed 20/20, running 0
+[0] completed 0/100, running 1
+[0] now trying: {'cli': 145, 'cpu1': 5, 'cpu2': 4}
+[1] completed 0/100, running 2
+[1] now trying: {'cli': 163, 'cpu1': 5, 'cpu2': 4}
+[2] completed 0/100, running 3
+[2] now trying: {'cli': 73, 'cpu1': 5, 'cpu2': 4}
+[3] completed 0/100, running 4
+[3] now trying: {'cli': 160, 'cpu1': 5, 'cpu2': 4}
+[4] completed 0/100, running 5
+[4] now trying: {'cli': 101, 'cpu1': 5, 'cpu2': 4}
+[5] completed 0/100, running 6
+[5] now trying: {'cli': 32, 'cpu1': 5, 'cpu2': 4}
+[6] completed 0/100, running 7
+[6] now trying: {'cli': 187, 'cpu1': 5, 'cpu2': 4}
+[7] completed 0/100, running 8
+[7] now trying: {'cli': 121, 'cpu1': 5, 'cpu2': 4}
+[8] completed 0/100, running 9
+[9] completed 0/100, running 10
+[8] now trying: {'cli': 194, 'cpu1': 5, 'cpu2': 4}
+[9] now trying: {'cli': 158, 'cpu1': 5, 'cpu2': 4}
+[10] completed 0/100, running 11
+[10] now trying: {'cli': 151, 'cpu1': 5, 'cpu2': 4}
+[11] completed 0/100, running 12
+[11] now trying: {'cli': 169, 'cpu1': 5, 'cpu2': 4}
+[12] completed 0/100, running 13
+[12] now trying: {'cli': 69, 'cpu1': 5, 'cpu2': 4}
+[13] completed 0/100, running 14
+[13] now trying: {'cli': 127, 'cpu1': 5, 'cpu2': 4}
+[1] successful (390.3414080142975 seconds): {'cli': 163, 'cpu1': 5, 'cpu2': 4}
+[1] completed 1/100, running 13
+[1] completed 1/100, running 14
+[1] now trying: {'cli': 42, 'cpu1': 5, 'cpu2': 4}
+[4] successful (409.7337453365326 seconds): {'cli': 101, 'cpu1': 5, 'cpu2': 4}
+[4] completed 2/100, running 13
+[4] completed 2/100, running 14
+[4] now trying: {'cli': 74, 'cpu1': 5, 'cpu2': 4}
+[7] successful (424.61882185935974 seconds): {'cli': 121, 'cpu1': 5, 'cpu2': 4}
+[7] completed 3/100, running 13
+[7] completed 3/100, running 14
+[7] now trying: {'cli': 24, 'cpu1': 5, 'cpu2': 4}
+[11] successful (437.6061975955963 seconds): {'cli': 169, 'cpu1': 5, 'cpu2': 4}
+[11] completed 4/100, running 13
+[11] completed 4/100, running 14
+[11] now trying: {'cli': 127, 'cpu1': 5, 'cpu2': 4}
+[3] successful (447.42664337158203 seconds): {'cli': 160, 'cpu1': 5, 'cpu2': 4}
+[3] completed 5/100, running 13
+[3] completed 5/100, running 14
+[3] now trying: {'cli': 103, 'cpu1': 5, 'cpu2': 4}
+[10] successful (447.6326992511749 seconds): {'cli': 151, 'cpu1': 5, 'cpu2': 4}
+[10] completed 6/100, running 13
+[10] completed 6/100, running 14
+[10] now trying: {'cli': 167, 'cpu1': 5, 'cpu2': 4}
+[13] successful (448.2793810367584 seconds): {'cli': 127, 'cpu1': 5, 'cpu2': 4}
+[13] completed 7/100, running 13
+[13] completed 7/100, running 14
+[13] now trying: {'cli': 64, 'cpu1': 5, 'cpu2': 4}
+[5] successful (451.59188890457153 seconds): {'cli': 32, 'cpu1': 5, 'cpu2': 4}
+[5] completed 8/100, running 13
+[5] completed 8/100, running 14
+[5] now trying: {'cli': 166, 'cpu1': 5, 'cpu2': 4}
+[0] successful (451.93373012542725 seconds): {'cli': 145, 'cpu1': 5, 'cpu2': 4}
+[0] completed 9/100, running 13
+[0] completed 9/100, running 14
+[0] now trying: {'cli': 140, 'cpu1': 5, 'cpu2': 4}
+[2] successful (454.0035457611084 seconds): {'cli': 73, 'cpu1': 5, 'cpu2': 4}
+[2] completed 10/100, running 13
+[2] completed 10/100, running 14
+[2] now trying: {'cli': 134, 'cpu1': 5, 'cpu2': 4}
+[6] successful (459.2773196697235 seconds): {'cli': 187, 'cpu1': 5, 'cpu2': 4}
+[6] completed 11/100, running 13
+[6] completed 11/100, running 14
+[6] now trying: {'cli': 40, 'cpu1': 5, 'cpu2': 4}
+[9] successful (464.03620624542236 seconds): {'cli': 158, 'cpu1': 5, 'cpu2': 4}
+[9] completed 12/100, running 13
+[9] completed 12/100, running 14
+[9] now trying: {'cli': 83, 'cpu1': 5, 'cpu2': 4}
+[12] successful (470.47277569770813 seconds): {'cli': 69, 'cpu1': 5, 'cpu2': 4}
+[12] completed 13/100, running 13
+[12] completed 13/100, running 14
+[12] now trying: {'cli': 126, 'cpu1': 5, 'cpu2': 4}
+[8] successful (487.19306087493896 seconds): {'cli': 194, 'cpu1': 5, 'cpu2': 4}
+[8] completed 14/100, running 13
+[8] completed 14/100, running 14
+[8] now trying: {'cli': 64, 'cpu1': 5, 'cpu2': 4}
+[4] successful (428.8046329021454 seconds): {'cli': 74, 'cpu1': 5, 'cpu2': 4}
+[4] completed 15/100, running 13
+[4] completed 15/100, running 14
+[4] now trying: {'cli': 187, 'cpu1': 5, 'cpu2': 4}
+[7] successful (424.8462562561035 seconds): {'cli': 24, 'cpu1': 5, 'cpu2': 4}
+[7] completed 16/100, running 13
+[7] completed 16/100, running 14
+[7] now trying: {'cli': 167, 'cpu1': 5, 'cpu2': 4}
+[10] successful (408.2497544288635 seconds): {'cli': 167, 'cpu1': 5, 'cpu2': 4}
+[10] completed 17/100, running 13
+[10] completed 17/100, running 14
+[10] now trying: {'cli': 132, 'cpu1': 5, 'cpu2': 4}
+[3] successful (423.8447632789612 seconds): {'cli': 103, 'cpu1': 5, 'cpu2': 4}
+[3] completed 18/100, running 13
+[3] completed 18/100, running 14
+[3] now trying: {'cli': 108, 'cpu1': 5, 'cpu2': 4}
+[1] successful (480.97501730918884 seconds): {'cli': 42, 'cpu1': 5, 'cpu2': 4}
+[1] completed 19/100, running 13
+[1] completed 19/100, running 14
+[1] now trying: {'cli': 70, 'cpu1': 5, 'cpu2': 4}
+[12] successful (416.0380895137787 seconds): {'cli': 126, 'cpu1': 5, 'cpu2': 4}
+[12] completed 20/100, running 13
+[12] completed 20/100, running 14
+[12] now trying: {'cli': 143, 'cpu1': 5, 'cpu2': 4}
+[0] successful (434.8961818218231 seconds): {'cli': 140, 'cpu1': 5, 'cpu2': 4}
+[0] completed 21/100, running 13
+[0] completed 21/100, running 14
+[0] now trying: {'cli': 170, 'cpu1': 5, 'cpu2': 4}
+[9] successful (426.70232248306274 seconds): {'cli': 83, 'cpu1': 5, 'cpu2': 4}
+[9] completed 22/100, running 13
+[9] completed 22/100, running 14
+[9] now trying: {'cli': 139, 'cpu1': 5, 'cpu2': 4}
+[6] successful (434.576696395874 seconds): {'cli': 40, 'cpu1': 5, 'cpu2': 4}
+[6] completed 23/100, running 13
+[6] completed 23/100, running 14
+[6] now trying: {'cli': 90, 'cpu1': 5, 'cpu2': 4}
+[11] successful (460.25020956993103 seconds): {'cli': 127, 'cpu1': 5, 'cpu2': 4}
+[11] completed 24/100, running 13
+[11] completed 24/100, running 14
+[11] now trying: {'cli': 36, 'cpu1': 5, 'cpu2': 4}
+[5] successful (458.26283502578735 seconds): {'cli': 166, 'cpu1': 5, 'cpu2': 4}
+[5] completed 25/100, running 13
+[5] completed 25/100, running 14
+[5] now trying: {'cli': 78, 'cpu1': 5, 'cpu2': 4}
+[13] successful (473.83723187446594 seconds): {'cli': 64, 'cpu1': 5, 'cpu2': 4}
+[13] completed 26/100, running 13
+[13] completed 26/100, running 14
+[13] now trying: {'cli': 26, 'cpu1': 5, 'cpu2': 4}
+[2] successful (473.1165807247162 seconds): {'cli': 134, 'cpu1': 5, 'cpu2': 4}
+[2] completed 27/100, running 13
+[2] completed 27/100, running 14
+[2] now trying: {'cli': 21, 'cpu1': 5, 'cpu2': 4}
+[8] successful (441.22457909584045 seconds): {'cli': 64, 'cpu1': 5, 'cpu2': 4}
+[8] completed 28/100, running 13
+[8] completed 28/100, running 14
+[8] now trying: {'cli': 179, 'cpu1': 5, 'cpu2': 4}
+[7] successful (439.6733727455139 seconds): {'cli': 167, 'cpu1': 5, 'cpu2': 4}
+[7] completed 29/100, running 13
+[7] completed 29/100, running 14
+[7] now trying: {'cli': 86, 'cpu1': 5, 'cpu2': 4}
+[10] successful (440.62283992767334 seconds): {'cli': 132, 'cpu1': 5, 'cpu2': 4}
+[10] completed 30/100, running 13
+[10] completed 30/100, running 14
+[10] now trying: {'cli': 144, 'cpu1': 5, 'cpu2': 4}
+[1] successful (425.964910030365 seconds): {'cli': 70, 'cpu1': 5, 'cpu2': 4}
+[1] completed 31/100, running 13
+[1] completed 31/100, running 14
+[1] now trying: {'cli': 20, 'cpu1': 5, 'cpu2': 4}
+[4] successful (458.8291001319885 seconds): {'cli': 187, 'cpu1': 5, 'cpu2': 4}
+[4] completed 32/100, running 13
+[4] completed 32/100, running 14
+[4] now trying: {'cli': 28, 'cpu1': 5, 'cpu2': 4}
+[12] successful (427.44454860687256 seconds): {'cli': 143, 'cpu1': 5, 'cpu2': 4}
+[12] completed 33/100, running 13
+[12] completed 33/100, running 14
+[12] now trying: {'cli': 81, 'cpu1': 5, 'cpu2': 4}
+[3] successful (444.62823963165283 seconds): {'cli': 108, 'cpu1': 5, 'cpu2': 4}
+[3] completed 34/100, running 13
+[3] completed 34/100, running 14
+[3] now trying: {'cli': 78, 'cpu1': 5, 'cpu2': 4}
+[0] successful (429.79686546325684 seconds): {'cli': 170, 'cpu1': 5, 'cpu2': 4}
+[0] completed 35/100, running 13
+[0] completed 35/100, running 14
+[0] now trying: {'cli': 197, 'cpu1': 5, 'cpu2': 4}
+[5] successful (407.2709331512451 seconds): {'cli': 78, 'cpu1': 5, 'cpu2': 4}
+[5] completed 36/100, running 13
+[5] completed 36/100, running 14
+[5] now trying: {'cli': 111, 'cpu1': 5, 'cpu2': 4}
+[6] successful (430.53478169441223 seconds): {'cli': 90, 'cpu1': 5, 'cpu2': 4}
+[6] completed 37/100, running 13
+[6] completed 37/100, running 14
+[6] now trying: {'cli': 177, 'cpu1': 5, 'cpu2': 4}
+[11] successful (442.93961572647095 seconds): {'cli': 36, 'cpu1': 5, 'cpu2': 4}
+[11] completed 38/100, running 13
+[11] completed 38/100, running 14
+[11] now trying: {'cli': 55, 'cpu1': 5, 'cpu2': 4}
+[9] successful (467.68780541419983 seconds): {'cli': 139, 'cpu1': 5, 'cpu2': 4}
+[9] completed 39/100, running 13
+[9] completed 39/100, running 14
+[9] now trying: {'cli': 139, 'cpu1': 5, 'cpu2': 4}
+[2] successful (439.18022561073303 seconds): {'cli': 21, 'cpu1': 5, 'cpu2': 4}
+[2] completed 40/100, running 13
+[2] completed 40/100, running 14
+[2] now trying: {'cli': 178, 'cpu1': 5, 'cpu2': 4}
+[13] successful (447.1140239238739 seconds): {'cli': 26, 'cpu1': 5, 'cpu2': 4}
+[13] completed 41/100, running 13
+[13] completed 41/100, running 14
+[13] now trying: {'cli': 104, 'cpu1': 5, 'cpu2': 4}
+[8] successful (451.94124722480774 seconds): {'cli': 179, 'cpu1': 5, 'cpu2': 4}
+[8] completed 42/100, running 13
+[8] completed 42/100, running 14
+[8] now trying: {'cli': 25, 'cpu1': 5, 'cpu2': 4}
+[7] successful (426.9325942993164 seconds): {'cli': 86, 'cpu1': 5, 'cpu2': 4}
+[7] completed 43/100, running 13
+[7] completed 43/100, running 14
+[7] now trying: {'cli': 60, 'cpu1': 5, 'cpu2': 4}
+[12] successful (410.9745376110077 seconds): {'cli': 81, 'cpu1': 5, 'cpu2': 4}
+[12] completed 44/100, running 13
+[12] completed 44/100, running 14
+[12] now trying: {'cli': 176, 'cpu1': 5, 'cpu2': 4}
+[10] successful (437.81000781059265 seconds): {'cli': 144, 'cpu1': 5, 'cpu2': 4}
+[10] completed 45/100, running 13
+[10] completed 45/100, running 14
+[10] now trying: {'cli': 47, 'cpu1': 5, 'cpu2': 4}
+[4] successful (446.0358920097351 seconds): {'cli': 28, 'cpu1': 5, 'cpu2': 4}
+[4] completed 46/100, running 13
+[4] completed 46/100, running 14
+[4] now trying: {'cli': 70, 'cpu1': 5, 'cpu2': 4}
+[6] successful (423.5993752479553 seconds): {'cli': 177, 'cpu1': 5, 'cpu2': 4}
+[6] completed 47/100, running 13
+[6] completed 47/100, running 14
+[6] now trying: {'cli': 193, 'cpu1': 5, 'cpu2': 4}
+[0] successful (448.319296836853 seconds): {'cli': 197, 'cpu1': 5, 'cpu2': 4}
+[0] completed 48/100, running 13
+[0] completed 48/100, running 14
+[0] now trying: {'cli': 86, 'cpu1': 5, 'cpu2': 4}
+[5] successful (448.41692423820496 seconds): {'cli': 111, 'cpu1': 5, 'cpu2': 4}
+[5] completed 49/100, running 13
+[5] completed 49/100, running 14
+[5] now trying: {'cli': 25, 'cpu1': 5, 'cpu2': 4}
+[1] successful (480.36500453948975 seconds): {'cli': 20, 'cpu1': 5, 'cpu2': 4}
+[1] completed 50/100, running 13
+[1] completed 50/100, running 14
+[1] now trying: {'cli': 164, 'cpu1': 5, 'cpu2': 4}
+[3] successful (463.9932532310486 seconds): {'cli': 78, 'cpu1': 5, 'cpu2': 4}
+[3] completed 51/100, running 13
+[3] completed 51/100, running 14
+[3] now trying: {'cli': 52, 'cpu1': 5, 'cpu2': 4}
+[8] successful (410.65106868743896 seconds): {'cli': 25, 'cpu1': 5, 'cpu2': 4}
+[8] completed 52/100, running 13
+[8] completed 52/100, running 14
+[8] now trying: {'cli': 192, 'cpu1': 5, 'cpu2': 4}
+[11] successful (457.6374433040619 seconds): {'cli': 55, 'cpu1': 5, 'cpu2': 4}
+[11] completed 53/100, running 13
+[11] completed 53/100, running 14
+[11] now trying: {'cli': 69, 'cpu1': 5, 'cpu2': 4}
+[9] successful (449.7320294380188 seconds): {'cli': 139, 'cpu1': 5, 'cpu2': 4}
+[9] completed 54/100, running 13
+[9] completed 54/100, running 14
+[9] now trying: {'cli': 140, 'cpu1': 5, 'cpu2': 4}
+[13] successful (454.20853424072266 seconds): {'cli': 104, 'cpu1': 5, 'cpu2': 4}
+[13] completed 55/100, running 13
+[13] completed 55/100, running 14
+[13] now trying: {'cli': 195, 'cpu1': 5, 'cpu2': 4}
+[2] successful (460.41294169425964 seconds): {'cli': 178, 'cpu1': 5, 'cpu2': 4}
+[2] completed 56/100, running 13
+[2] completed 56/100, running 14
+[2] now trying: {'cli': 39, 'cpu1': 5, 'cpu2': 4}
+[4] successful (424.57808685302734 seconds): {'cli': 70, 'cpu1': 5, 'cpu2': 4}
+[4] completed 57/100, running 13
+[4] completed 57/100, running 14
+[4] now trying: {'cli': 31, 'cpu1': 5, 'cpu2': 4}
+[12] successful (443.39492177963257 seconds): {'cli': 176, 'cpu1': 5, 'cpu2': 4}
+[12] completed 58/100, running 13
+[12] completed 58/100, running 14
+[12] now trying: {'cli': 152, 'cpu1': 5, 'cpu2': 4}
+[7] successful (455.275452375412 seconds): {'cli': 60, 'cpu1': 5, 'cpu2': 4}
+[7] completed 59/100, running 13
+[7] completed 59/100, running 14
+[7] now trying: {'cli': 29, 'cpu1': 5, 'cpu2': 4}
+[6] successful (449.3668658733368 seconds): {'cli': 193, 'cpu1': 5, 'cpu2': 4}
+[6] completed 60/100, running 13
+[6] completed 60/100, running 14
+[6] now trying: {'cli': 176, 'cpu1': 5, 'cpu2': 4}
+[10] successful (472.95644998550415 seconds): {'cli': 47, 'cpu1': 5, 'cpu2': 4}
+[10] completed 61/100, running 13
+[10] completed 61/100, running 14
+[10] now trying: {'cli': 155, 'cpu1': 5, 'cpu2': 4}
+[1] successful (435.8052718639374 seconds): {'cli': 164, 'cpu1': 5, 'cpu2': 4}
+[1] completed 62/100, running 13
+[1] completed 62/100, running 14
+[1] now trying: {'cli': 80, 'cpu1': 5, 'cpu2': 4}
+[5] successful (458.6914463043213 seconds): {'cli': 25, 'cpu1': 5, 'cpu2': 4}
+[5] completed 63/100, running 13
+[5] completed 63/100, running 14
+[5] now trying: {'cli': 135, 'cpu1': 5, 'cpu2': 4}
+[0] successful (460.15704321861267 seconds): {'cli': 86, 'cpu1': 5, 'cpu2': 4}
+[0] completed 64/100, running 13
+[0] completed 64/100, running 14
+[0] now trying: {'cli': 115, 'cpu1': 5, 'cpu2': 4}
+[9] successful (419.48831939697266 seconds): {'cli': 140, 'cpu1': 5, 'cpu2': 4}
+[9] completed 65/100, running 13
+[9] completed 65/100, running 14
+[9] now trying: {'cli': 60, 'cpu1': 5, 'cpu2': 4}
+[3] successful (459.09603476524353 seconds): {'cli': 52, 'cpu1': 5, 'cpu2': 4}
+[3] completed 66/100, running 13
+[3] completed 66/100, running 14
+[3] now trying: {'cli': 62, 'cpu1': 5, 'cpu2': 4}
+[8] successful (452.86950731277466 seconds): {'cli': 192, 'cpu1': 5, 'cpu2': 4}
+[8] completed 67/100, running 13
+[8] completed 67/100, running 14
+[8] now trying: {'cli': 43, 'cpu1': 5, 'cpu2': 4}
+[11] successful (454.8182544708252 seconds): {'cli': 69, 'cpu1': 5, 'cpu2': 4}
+[11] completed 68/100, running 13
+[11] completed 68/100, running 14
+[11] now trying: {'cli': 117, 'cpu1': 5, 'cpu2': 4}
+[13] successful (430.23030161857605 seconds): {'cli': 195, 'cpu1': 5, 'cpu2': 4}
+[13] completed 69/100, running 13
+[13] completed 69/100, running 14
+[13] now trying: {'cli': 147, 'cpu1': 5, 'cpu2': 4}
+[2] successful (435.0092430114746 seconds): {'cli': 39, 'cpu1': 5, 'cpu2': 4}
+[2] completed 70/100, running 13
+[2] completed 70/100, running 14
+[2] now trying: {'cli': 128, 'cpu1': 5, 'cpu2': 4}
+[12] successful (449.8987338542938 seconds): {'cli': 152, 'cpu1': 5, 'cpu2': 4}
+[12] completed 71/100, running 13
+[12] completed 71/100, running 14
+[12] now trying: {'cli': 47, 'cpu1': 5, 'cpu2': 4}
+[4] successful (458.0774438381195 seconds): {'cli': 31, 'cpu1': 5, 'cpu2': 4}
+[4] completed 72/100, running 13
+[4] completed 72/100, running 14
+[4] now trying: {'cli': 111, 'cpu1': 5, 'cpu2': 4}
+[7] successful (455.6101746559143 seconds): {'cli': 29, 'cpu1': 5, 'cpu2': 4}
+[7] completed 73/100, running 13
+[7] completed 73/100, running 14
+[7] now trying: {'cli': 181, 'cpu1': 5, 'cpu2': 4}
+[6] successful (433.95681595802307 seconds): {'cli': 176, 'cpu1': 5, 'cpu2': 4}
+[6] completed 74/100, running 13
+[6] completed 74/100, running 14
+[6] now trying: {'cli': 21, 'cpu1': 5, 'cpu2': 4}
+[1] successful (437.00680804252625 seconds): {'cli': 80, 'cpu1': 5, 'cpu2': 4}
+[1] completed 75/100, running 13
+[1] completed 75/100, running 14
+[1] now trying: {'cli': 111, 'cpu1': 5, 'cpu2': 4}
+[5] successful (429.5831537246704 seconds): {'cli': 135, 'cpu1': 5, 'cpu2': 4}
+[5] completed 76/100, running 13
+[5] completed 76/100, running 14
+[5] now trying: {'cli': 144, 'cpu1': 5, 'cpu2': 4}
+[10] successful (448.1927373409271 seconds): {'cli': 155, 'cpu1': 5, 'cpu2': 4}
+[10] completed 77/100, running 13
+[10] completed 77/100, running 14
+[10] now trying: {'cli': 36, 'cpu1': 5, 'cpu2': 4}
+[0] successful (438.9969789981842 seconds): {'cli': 115, 'cpu1': 5, 'cpu2': 4}
+[0] completed 78/100, running 13
+[0] completed 78/100, running 14
+[0] now trying: {'cli': 182, 'cpu1': 5, 'cpu2': 4}
+[13] successful (433.30431294441223 seconds): {'cli': 147, 'cpu1': 5, 'cpu2': 4}
+[13] completed 79/100, running 13
+[13] completed 79/100, running 14
+[13] now trying: {'cli': 41, 'cpu1': 5, 'cpu2': 4}
+[3] successful (452.64750242233276 seconds): {'cli': 62, 'cpu1': 5, 'cpu2': 4}
+[3] completed 80/100, running 13
+[3] completed 80/100, running 14
+[3] now trying: {'cli': 153, 'cpu1': 5, 'cpu2': 4}
+[9] successful (467.15155839920044 seconds): {'cli': 60, 'cpu1': 5, 'cpu2': 4}
+[9] completed 81/100, running 13
+[9] completed 81/100, running 14
+[9] now trying: {'cli': 193, 'cpu1': 5, 'cpu2': 4}
+[2] successful (440.79821252822876 seconds): {'cli': 128, 'cpu1': 5, 'cpu2': 4}
+[2] completed 82/100, running 13
+[2] completed 82/100, running 14
+[2] now trying: {'cli': 70, 'cpu1': 5, 'cpu2': 4}
+[8] successful (461.3012137413025 seconds): {'cli': 43, 'cpu1': 5, 'cpu2': 4}
+[8] completed 83/100, running 13
+[8] completed 83/100, running 14
+[8] now trying: {'cli': 135, 'cpu1': 5, 'cpu2': 4}
+[11] successful (461.2789821624756 seconds): {'cli': 117, 'cpu1': 5, 'cpu2': 4}
+[11] completed 84/100, running 13
+[11] completed 84/100, running 14
+[11] now trying: {'cli': 38, 'cpu1': 5, 'cpu2': 4}
+[12] successful (423.9733250141144 seconds): {'cli': 47, 'cpu1': 5, 'cpu2': 4}
+[12] completed 85/100, running 13
+[12] completed 85/100, running 14
+[12] now trying: {'cli': 90, 'cpu1': 5, 'cpu2': 4}
+[10] successful (415.12751293182373 seconds): {'cli': 36, 'cpu1': 5, 'cpu2': 4}
+[10] completed 86/100, running 13
+[10] completed 86/100, running 14
+[10] now trying: {'cli': 142, 'cpu1': 5, 'cpu2': 4}
+[4] successful (449.4173092842102 seconds): {'cli': 111, 'cpu1': 5, 'cpu2': 4}
+[4] completed 87/100, running 13
+[7] successful (449.4073483943939 seconds): {'cli': 181, 'cpu1': 5, 'cpu2': 4}
+[7] completed 88/100, running 12
+[6] successful (457.9596700668335 seconds): {'cli': 21, 'cpu1': 5, 'cpu2': 4}
+[6] completed 89/100, running 11
+[5] successful (445.70390248298645 seconds): {'cli': 144, 'cpu1': 5, 'cpu2': 4}
+[5] completed 90/100, running 10
+[13] successful (413.8835072517395 seconds): {'cli': 41, 'cpu1': 5, 'cpu2': 4}
+[13] completed 91/100, running 9
+[1] successful (459.08478260040283 seconds): {'cli': 111, 'cpu1': 5, 'cpu2': 4}
+[1] completed 92/100, running 8
+[2] successful (411.08115434646606 seconds): {'cli': 70, 'cpu1': 5, 'cpu2': 4}
+[2] completed 93/100, running 7
+[0] successful (453.71420192718506 seconds): {'cli': 182, 'cpu1': 5, 'cpu2': 4}
+[0] completed 94/100, running 6
+[11] successful (405.00023007392883 seconds): {'cli': 38, 'cpu1': 5, 'cpu2': 4}
+[11] completed 95/100, running 5
+[8] successful (417.2612986564636 seconds): {'cli': 135, 'cpu1': 5, 'cpu2': 4}
+[8] completed 96/100, running 4
+[9] successful (431.30945467948914 seconds): {'cli': 193, 'cpu1': 5, 'cpu2': 4}
+[9] completed 97/100, running 3
+[3] successful (442.94934916496277 seconds): {'cli': 153, 'cpu1': 5, 'cpu2': 4}
+[3] completed 98/100, running 2
+[12] successful (280.04870676994324 seconds): {'cli': 90, 'cpu1': 5, 'cpu2': 4}
+[12] completed 99/100, running 1
+[10] successful (271.73294711112976 seconds): {'cli': 142, 'cpu1': 5, 'cpu2': 4}
+[10] completed 100/100, running 0
