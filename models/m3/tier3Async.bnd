@@ -1,0 +1,3 @@
+cli int 20 200
+cpu1 int 5 5
+cpu2 int 4 4
